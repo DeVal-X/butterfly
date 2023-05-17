@@ -1,0 +1,87 @@
+html, body {
+  overflow: hidden;
+}
+
+/*small components*/
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+
+/*main component*/
+
+.drawing {
+  --body: black /*#EEEAD7*/;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.body{
+  position: absolute;
+  width: 4%;
+  height: 4%;
+  background: var(--body);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.body::before {
+  width: 60%;
+  height: 1000%;
+  background-color: var(--body);
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+}
+
+.wing-top {
+  position: absolute;
+  top: 7%;
+  width: 50%;
+  height: 45%;
+  background: linear-gradient(darkorange, #EEEAD7);
+  border-radius: 5% 110% 10% 80%;
+  transform-origin: right bottom;
+  transform: rotate(-11deg);
+  box-shadow:
+    inset 3.5vmin 1.5vmin 0 1vmin,
+    inset -0.5vmin 0 0 1vmin;
+  /*animation: wingTopFlap1 2s linear infinite; //replace by later animation
+  overflow: hidden;*/
+}
+
+.wing-bottom {
+  position: relative;
+  width: 28%;
+  height: 40%;
+  top: 78%;
+  left: 23%;
+  background: linear-gradient(95deg, darkorange, #EEEAD7);
+  border-radius:  5% 110% 10% 80%;
+  transform-origin: right top;
+  transform: rotate(85deg);
+  box-shadow:
+    inset 1vmin -2vmin 0 0.5vmin,
+    inset 0.5vmin -2vmin 0 0.5vmin;
+  /*animation: wingBottomFlap1 2s linear infinite;
+  overflow: hidden;
+}*/
+
+/*styling*/
